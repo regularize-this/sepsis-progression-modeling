@@ -45,10 +45,24 @@ Antibiotics
 Cultures
 Vasopressors
 
-#### exploratory_analysis.ipynb
+#### model_1.py
+
+Set initial transition probability matrix, emission means matrix, and hidden state starting probabilities (all based on researched metrics). 
+
+Use hmmlearn (4 state Gaussian Hidden Markov Model). 
 
 
-#### model_results.ipynb
+#### train_model_1.py
+
+Train the model. Clip the data to remove outliers.
+
+
+
+#### evaluation.py
+
+Evaluate model (print out learned transition and emission matrices). 
+Generate useful charts for individual patients.
+
 
 ## Installation
 git clone https://github.com/username/sepsis-progression-model
