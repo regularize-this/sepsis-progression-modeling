@@ -51,7 +51,7 @@ Set initial transition probability matrix, emission means matrix, and hidden sta
 
 Use hmmlearn (4 state Gaussian Hidden Markov Model). 
 
-![Base HMM Model Architechture](figures/Base HMM Model (Model A).png)
+![Base HMM Model Architecture](<figures/Base HMM Model (Model A).png>)
 
 #### train_model_1.py
 
@@ -61,7 +61,6 @@ Train the model. Use Hmmlearn
 #### evaluation.py
 Generate missing flags for vitals. Mask if missing after two hours.
 Use lactate levels to assign hidden sepsis states. We generate an alert whenever the probability of progressing to the next stage is above 30%.
-
 
 Code exists to evaluate model (print out learned transition and emission matrices) and to generate useful charts for individual patients.
 
