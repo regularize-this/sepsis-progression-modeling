@@ -202,7 +202,9 @@ python src/train_model_1.py
 
 ## Future Improvements
 Possible next steps:
-Use more patient data, and further elaborate on Model B.
+- Expand the cohort by testing broader suspected-infection definitions, wider age ranges, and sensitivity to alternative inclusion windows.
+- Perform external validation to assess whether the Bayesian continuous-time HMM generalizes beyond the original MIMIC-IV setting.
+- Prospectively evaluate the DSS as a complement to frontline sepsis alert systems, rather than as a replacement for them
 
 ### Collaborators
 Ryan Abdelrahim, Collin Kim, Yuta Kobayashi, Junghoon Yum and Nick Thompson
