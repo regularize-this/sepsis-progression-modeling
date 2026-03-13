@@ -1,0 +1,6 @@
+numpy
+pandas
+pymc
+arviz
+matplotlib
+scikit-learn
