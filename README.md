@@ -46,3 +46,5 @@ Ryan Abdelrahim, Collin Kim, Yuta Kobayashi, Junghoon Yum and Nick Thompson
 [1] https://www.cdc.gov/sepsis/about/index.html#:~:text=Sepsis%20is%20a%20life%2Dthreatening%20medical%20emergency%20that,infections%2C%20such%20as%20influenza%20*%20Fungal%20infections
 [2] https://my.clevelandclinic.org/health/diseases/12361-sepsis
 [3] https://www.salvilaw.com/blog/sepsis-stages/
+
+Figure: Clinical progression of sepsis. Diagram created by the authors using Google Slides icons and shapes.
