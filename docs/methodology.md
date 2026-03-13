@@ -19,3 +19,5 @@ Bayesian models allow us to:
 Sampling method: MCMC  
 Iterations: XXXX  
 Convergence diagnostics: R-hat, trace plots
+
+[opyional] include image of model structure -> figures/model_structure.png
