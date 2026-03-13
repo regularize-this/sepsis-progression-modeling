@@ -64,6 +64,129 @@ Use lactate levels to assign hidden sepsis states. We generate an alert whenever
 
 Code exists to evaluate model (print out learned transition and emission matrices) and to generate useful charts for individual patients.
 
+---
+## Model B: Bayesian Continuous-Time Hidden Markov Model
+
+Model B uses a **Bayesian continuous-time Hidden Markov Model (HMM)** to infer latent sepsis severity trajectories from ICU patient data. Unlike simpler baseline approaches, Model B preserves irregular ICU timing and explicitly models how treatment and elapsed time influence transitions between hidden severity states.
+
+### Inputs
+
+Model B uses the following observed clinical features:
+
+- Heart Rate (HR)
+- Systolic Blood Pressure (SBP)
+- Mean Arterial Pressure (MAP)
+- Temperature
+- Respiratory Rate (RR)
+- Oxygen Saturation (SpO2)
+- Lactate
+- White Blood Cell Count (WBC)
+- Platelets
+- Creatinine
+- Bilirubin
+- Hemoglobin
+- SOFA Score
+- Elapsed time between observations (`delta_t`)
+
+It also incorporates treatment indicators as transition covariates:
+
+- Antibiotics
+- IV Fluids
+- Vasopressors
+
+### Core Idea
+
+Model B assumes that septic ICU patients move through a small number of **hidden clinical severity states** over time. These states are not directly observed, but are inferred from the patient’s vital signs, laboratory values, organ dysfunction measures, and treatment history.
+
+The model is designed to answer questions such as:
+
+- What latent severity state is the patient currently in?
+- How likely is the patient to worsen or improve next?
+- How do active treatments affect transition tendencies?
+- How much risk increases if treatment is delayed?
+
+### Why Model B Is Different
+
+Model B extends beyond a standard Gaussian HMM in several important ways:
+
+- **Bayesian framework**  
+  Captures uncertainty in model parameters and state assignments.
+
+- **Continuous-time awareness**  
+  Preserves irregular ICU timestamps instead of forcing data into fixed hourly bins.
+
+- **Treatment-aware transitions**  
+  Transition probabilities depend on active treatment exposure.
+
+- **Severity-aware transitions**  
+  Baseline SOFA is included to reflect the patient’s initial illness burden.
+
+- **Time-aware transitions**  
+  Elapsed time (`delta_t`) influences the likelihood of moving between hidden states.
+
+### Transition Structure
+
+For each current state and next state, transition probabilities are modeled as a function of:
+
+- a baseline transition term,
+- treatment exposure,
+- treatment × baseline SOFA interaction,
+- baseline severity,
+- elapsed time (`delta_t`).
+
+These transition logits are then passed through a row-wise softmax to produce valid transition probabilities.
+
+### Inference
+
+The model is implemented in **PyMC** and trained using **Automatic Differentiation Variational Inference (ADVI)**.
+
+Training setup:
+
+- 50,000 ADVI iterations
+- 2,000 posterior samples drawn from the variational approximation
+
+This makes the Bayesian HMM computationally feasible for long ICU trajectories while still preserving posterior uncertainty.
+
+### Outputs
+
+Model B produces:
+
+- patient-level latent state probabilities,
+- learned severity state profiles,
+- treatment-conditioned transition summaries,
+- short-horizon trajectory forecasts,
+- decision-support outputs for treatment timing and progression risk.
+
+### Interpretation of Hidden States
+
+The learned hidden states are interpreted post hoc as clinically meaningful severity profiles such as:
+
+- Mild
+- Moderate
+- Shock-dominant
+
+These labels are assigned after training based on organ dysfunction patterns and clinical feature profiles, rather than being hard-coded in advance.
+
+### Decision Support Use Case
+
+Model B is designed not only for retrospective trajectory analysis, but also for **clinical decision support simulation**. It can be used to:
+
+- compare treatment scenarios,
+- estimate worsening risk,
+- evaluate the effect of delayed intervention,
+- identify patients approaching more severe latent states.
+
+### Model B Notebooks
+
+- [Data Extraction](./notebooks/01_Data_Extraction.ipynb)
+- [Data Preprocessing](./notebooks/02_Data_Preprocessing.ipynb)
+- [Exploratory Data Analysis](./notebooks/03_EDA.ipynb)
+- [SOFA Feature Engineering](./notebooks/04_SOFA_Feature_Engineering.ipynb)
+- [Bayesian HMM Training](./notebooks/05_Bayesian_HMM_ADVI.ipynb)
+- [Prediction and DSS](./notebooks/06_Prediction_DSS.ipynb)
+---
+
+
 
 ## Installation
 git clone https://github.com/username/sepsis-progression-model
