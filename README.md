@@ -35,15 +35,15 @@ Timing is key with sepsis treatment; every hour that passes without treatment si
 ### Model A: 
 
 Uses the following vitals and interventions to predict Sepsis states:
-Heart Rate (HR)
-Peripheral capillary oxygen saturation (SpO2)
-White Blood Cell Count (WBC)
-Lactate Levels (Lactate)
-Man Arterial Pressure (MAP)
-Oxygen
-Antibiotics
-Cultures
-Vasopressors
+- Heart Rate (HR)
+- Peripheral capillary oxygen saturation (SpO2)
+- White Blood Cell Count (WBC)
+- Lactate Levels (Lactate)
+- Main Arterial Pressure (MAP)
+- Oxygen
+- Antibiotics
+- Cultures
+- Vasopressors
 
 
 #### model_1.py
