@@ -4,3 +4,5 @@ pymc
 arviz
 matplotlib
 scikit-learn
+duckdb
+tqdm
