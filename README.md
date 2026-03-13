@@ -15,6 +15,12 @@ Sepsis patients do not follow a linear path and fluctuate between somewhat hidde
 
 Sepsis is also the leading cause of death in hospital Intensive Care Units (ICUs) and sepsis related hospitalizations increased by 40% from 2016–2021, totaling 2.5 million inpatient stays in 2021. Annual hospital costs reached $52.1 billion in 2021 (14% of all US hospital costs), over half of sepsis hospitalizations were for adults 65 years and older, and one in six older patients with sepsis died in the hospital in 2021.
 
+## Clinical Progression of Sepsis Example
+Diagram created by the authors using Google Slides icons and shapes.
+
+![Clinical Pathway](figures/clinical_pathway_progression.png)
+
+Patients typically progress through stages including early infection, systemic inflammatory response syndrome (SIRS), sepsis, and septic shock. Our models aim to infer these latent stages from observed clinical measurements.
 ## The Critical Need For Sepsis Modeling (Probelm Statement)
 Timing is key with sepsis treatment; every hour that passes without treatment significantly increases the risk of permanent organ damage or death. Modeling Sepsis progression will allow for more accurate and faster diagnoses, and will help busy ICUs staff stay one step ahead (proactive treatment instead of reactive treatment). This project models sepsis progression using Bayesian approaches to infer latent clinical states.
 
@@ -46,5 +52,3 @@ Ryan Abdelrahim, Collin Kim, Yuta Kobayashi, Junghoon Yum and Nick Thompson
 [1] https://www.cdc.gov/sepsis/about/index.html#:~:text=Sepsis%20is%20a%20life%2Dthreatening%20medical%20emergency%20that,infections%2C%20such%20as%20influenza%20*%20Fungal%20infections
 [2] https://my.clevelandclinic.org/health/diseases/12361-sepsis
 [3] https://www.salvilaw.com/blog/sepsis-stages/
-
-Figure: Clinical progression of sepsis. Diagram created by the authors using Google Slides icons and shapes.
