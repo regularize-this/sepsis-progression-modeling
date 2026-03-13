@@ -45,8 +45,8 @@ Antibiotics
 Cultures
 Vasopressors
 
-#### model_1.py
 
+#### model_1.py
 Set initial transition probability matrix, emission means matrix, and hidden state starting probabilities (all based on researched metrics). 
 
 Use hmmlearn (4 state Gaussian Hidden Markov Model). 
@@ -54,14 +54,15 @@ Use hmmlearn (4 state Gaussian Hidden Markov Model).
 
 #### train_model_1.py
 
-Train the model. Clip the data to remove outliers.
-
+Train the model. Use Hmmlearn
 
 
 #### evaluation.py
+Generate missing flags for vitals. Mask if missing after two hours.
+Use lactate levels to assign hidden sepsis states. We generate an alert whenever the probability of progressing to the next stage is above 30%.
 
-Evaluate model (print out learned transition and emission matrices). 
-Generate useful charts for individual patients.
+
+Code exists to evaluate model (print out learned transition and emission matrices) and to generate useful charts for individual patients.
 
 
 ## Installation
