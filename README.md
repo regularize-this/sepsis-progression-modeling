@@ -51,6 +51,7 @@ Set initial transition probability matrix, emission means matrix, and hidden sta
 
 Use hmmlearn (4 state Gaussian Hidden Markov Model). 
 
+![Base HMM Model Architechture](figures/Base HMM Model (Model A).png/)
 
 #### train_model_1.py
 
