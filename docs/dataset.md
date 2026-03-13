@@ -24,8 +24,17 @@ N = 1503 patients
 
 ### Variables Used and Reasoning
 - Labs:
+  - WBC (White Blood Cell count): Indicates the body’s immune response; high or low WBC can signal infection or sepsis onset.
+  - Lactate: Elevated lactate is associated with tissue hypoperfusion and can be an early marker of sepsis severity and risk of organ failure.
 - Vitals:
+  - HR: (Heart Rate): Tachycardia is common in sepsis and reflects physiological stress.
+  - MAP: (Mean Arterial Pressure): Low MAP indicates hypotension, a key feature in septic shock.
+  - SPO2: (Oxygen Saturation): Measures oxygenation; declining SpO₂ can indicate respiratory compromise common in severe sepsis.
 - Interventions:
+  - Antibiotics: Timing and administration reflect recognition and treatment of infection; can influence progression and outcomes. 
+  - Oxygen support: Reflects respiratory support needs; escalation may indicate worsening clinical state.
+  - Vasopressors: Used to maintain blood pressure; initiation signals transition to more severe sepsis/shock.
+  - Bacterial Cultures: Provide evidence of infection type and severity; help link physiological changes to pathogen presence.
 
 *Data access requires an approval process via PhysioNet (https://physionet.org/content/mimiciv/)
 **Sepsis related labs and antibiotics are as follows:
