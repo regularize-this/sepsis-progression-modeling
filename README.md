@@ -64,9 +64,9 @@ Use lactate levels to assign hidden sepsis states. We generate an alert whenever
 
 Code exists to evaluate model (print out learned transition and emission matrices) and to generate useful charts for individual patients.
 
-![Base HMM Model Architecture](<figures/Model A Output Example.png>)
+![Output Example](<figures/Model A Output Example.png>)
 
-![Base HMM Model Architecture](<figures/Model A Output Example 2.png>)
+![Output Potential Example](<figures/Model A Output Example 2.png>)
 
 
 ---
