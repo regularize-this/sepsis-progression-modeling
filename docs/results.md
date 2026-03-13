@@ -1,4 +1,12 @@
 # Results
+## Model Comparison
+
+| Feature | Model 1 | Model 2 |
+|-------|-------|-------|
+| Modeling approach | HMM | Bayesian state-space |
+| Handles missingness | Yes | Yes |
+| Interpretability | Moderate | High |
+| Computational cost | Lower | Higher |
 
 ## Latent State Interpretation
 
