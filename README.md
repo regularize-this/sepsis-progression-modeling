@@ -31,7 +31,24 @@ Timing is key with sepsis treatment; every hour that passes without treatment si
 - Feature 3
 
 ## How It Works
-Explain the approach / method.
+
+### Model A: 
+
+Uses the following vitals and interventions to predict Sepsis states:
+Heart Rate (HR)
+Peripheral capillary oxygen saturation (SpO2)
+White Blood Cell Count (WBC)
+Lactate Levels (Lactate)
+Man Arterial Pressure (MAP)
+Oxygen
+Antibiotics
+Cultures
+Vasopressors
+
+#### exploratory_analysis.ipynb
+
+
+#### model_results.ipynb
 
 ## Installation
 git clone https://github.com/username/sepsis-progression-model
