@@ -199,14 +199,10 @@ cd sepsis-progression-model
 pip install -r requirements.txt
 python src/train_model_1.py
 
-## Usage
-Example commands or screenshots.
-
-## Results
-What results you got.
 
 ## Future Improvements
-Possible next steps
+Possible next steps:
+Use more patient data, and further elaborate on Model B.
 
 ### Collaborators
 Ryan Abdelrahim, Collin Kim, Yuta Kobayashi, Junghoon Yum and Nick Thompson
