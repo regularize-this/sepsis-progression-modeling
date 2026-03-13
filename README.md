@@ -34,7 +34,10 @@ Timing is key with sepsis treatment; every hour that passes without treatment si
 Explain the approach / method.
 
 ## Installation
-Steps to run the project.
+git clone https://github.com/username/sepsis-progression-model
+cd sepsis-progression-model
+pip install -r requirements.txt
+python src/train_model_1.py
 
 ## Usage
 Example commands or screenshots.
@@ -44,12 +47,6 @@ What results you got.
 
 ## Future Improvements
 Possible next steps
-
-## How to Reproduce:
-git clone https://github.com/username/sepsis-progression-model
-cd sepsis-progression-model
-pip install -r requirements.txt
-python src/train_model_1.py
 
 ### Collaborators
 Ryan Abdelrahim, Collin Kim, Yuta Kobayashi, Junghoon Yum and Nick Thompson
