@@ -13,4 +13,6 @@
 ## Future Work
 1. Expand the cohort by testing broader suspected-infection definitions, wider age ranges, and sensitivity to alternative inclusion windows.
 2. Perform external validation to assess whether the Bayesian continuous-time HMM generalizes beyond the original MIMIC-IV setting.
-3. Prospectively evaluate the DSS as a complement to frontline sepsis alert systems, rather than as a replacement for them. 
+3. Prospectively evaluate the DSS as a complement to frontline sepsis alert systems, rather than as a replacement for them.
+4. Extend clinical decision support system to consider causality of interventions, including them in HMM framework.
+5. Vet model with clinical experts for validation and working towards approval for clinical use.
