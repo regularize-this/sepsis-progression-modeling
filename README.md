@@ -25,11 +25,6 @@ Patients typically progress through stages including early infection, systemic i
 Timing is key with sepsis treatment; every hour that passes without treatment significantly increases the risk of permanent organ damage or death. Modeling Sepsis progression will allow for more accurate and faster diagnoses, and will help busy ICUs staff stay one step ahead (proactive treatment instead of reactive treatment). This project models sepsis progression using Bayesian approaches to infer latent clinical states.
 
 
-## Features
-- Feature 1
-- Feature 2
-- Feature 3
-
 ## How It Works
 
 ### Model A: 
