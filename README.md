@@ -1,4 +1,4 @@
-# Bayesian Modeling of Sepsis Progression in ICU Patients using MIMIC-IV Data and Bayesian Modeling
+# Bayesian Modeling of Sepsis Progression in ICU Patients using MIMIC-IV Data
 
 ## Introduction [1][2][3]
 Sepsis is the body's extreme response to an infection. It is a life-threatening medical emergency since the infection can cause a chain-reaction leading to tissue damage, organ failure and death.
